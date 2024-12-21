@@ -1,0 +1,129 @@
+.namer{
+    font-family: Roboto Slab;
+    font-size: 38px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.25);
+}
+.web-top-title{
+    font-family: Roboto Slab;
+    font-size: 48px;
+    font-weight: 600;
+    color: white;
+}
+.web-top-desc{
+    font-family: Jost;
+    font-size: 28px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.75);
+}
+.cv{
+    font-family: Poppins;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px 103px;
+    transition: 0.3s;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.icons img{
+    cursor: pointer;
+}
+.cv:hover{
+    background-color: white;
+    color: black;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.web-top-text{
+    width: 690px;
+    margin-top: 140px;
+    z-index: 1;
+}
+.web-top{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.web-top > img{
+    width: 590px;
+    z-index: 1;
+}
+.buttons{
+    display: flex;
+    gap: 50px;
+}
+.animated-text{
+    font-family: Roboto Slab;
+    font-size: 128px;
+    font-weight: 600;
+    color: white; 
+    text-align: center;
+    margin: 0;
+    margin-top: -200px;
+    text-shadow: 
+    -2px -2px 0 black,  
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black; /* Opcjonalny cień jako alternatywa */
+    color: transparent;
+    white-space: nowrap;
+    z-index: -1;
+}
+@media (max-width: 1435px) {
+    .animated-text{
+        font-size: 100px;
+    }
+}
+@media (max-width: 1260px) {
+    .web-top{
+        gap: 0;
+    }
+    .web-top-title{
+        font-size: 40px;
+    }
+    .web-top-desc{
+        font-size: 22px;
+    }
+    .namer{
+        font-size: 32px;
+    }
+    .web-top > img{
+        width: 400px;
+    }
+    .buttons{
+        display: block;
+    }
+    .icons{
+        max-width: 320px;
+        margin-top: 30px;
+    }
+    .animated-text{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 750px) {
+    .web-top{
+        display: block;
+        text-align: center;
+        width: auto;
+    }
+    .web-top-text{
+        width: auto;
+    }
+    .icons{
+        margin: auto;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 440px) {
+    .web-top > img{
+        width: 300px;
+    }
+}
