@@ -2,22 +2,25 @@ import './../styles/HomePage.css';
 import git from './../assets/images/Git (2).png';
 import linkedin from './../assets/images/in.png';
 import hociak from './../assets/images/Zdjęcie.png';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../components/language-selector';
 
-function HomePage() {
+const HomePage = () => {
+  const {t} = useTranslation()
+
   return(
     <>
       <div className="center-container">
+        <LanguageSelector />
         <div className="web-top">
           <div className="web-top-text">
-            <span className="namer">Jestem Szymon</span>
-            <h1 className="web-top-title">Lorem ipsum dolor sit amet consectetur. Nulla sodales.</h1>
+            <span className='namer'>{t("name")}</span>
+            <h1 className="web-top-title">{t("title")}</h1>
             <p className="web-top-desc">
-              Lorem ipsum dolor sit amet consectetur. In massa egestas arcu egestas suscipit 
-              consectetur nunc. Etiam proin enim mattis malesuada lectus augue tempus nunc. 
-              Risus ultrices sed at volutpat risus tellus velit. 
+              {t("desc")}
             </p>
             <div className='buttons'>
-              <button className='cv'>Pobierz CV</button>
+              <button className='cv'>{t("cvbutton")}</button>
               <div className='icons'>
                 <img src={git} />
                 <img src={linkedin} />
