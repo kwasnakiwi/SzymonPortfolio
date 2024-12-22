@@ -31,7 +31,8 @@ const HomePage = () => {
           <img src={hociak} />
         </div>
         <div className='animated-text-box'>
-          <h3 className='animated-text'>&lt;/&gt; BACKEND DEVELOPER &lt;/&gt;</h3>
+          <h3 className='animated-text'>&lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt;</h3>
+        
         </div>
       </div>
     </>

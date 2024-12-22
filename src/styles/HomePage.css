@@ -59,22 +59,57 @@
     display: flex;
     gap: 50px;
 }
+.animated-text-box{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
 .animated-text{
     font-family: Roboto Slab;
-    font-size: 128px;
+    font-size: 158px;
     font-weight: 600;
-    color: white; 
+    color: black; 
     text-align: center;
     margin: 0;
     margin-top: -200px;
-    text-shadow: 
-    -2px -2px 0 black,  
-     2px -2px 0 black,
-    -2px  2px 0 black,
-     2px  2px 0 black; /* Opcjonalny cień jako alternatywa */
-    color: transparent;
     white-space: nowrap;
     z-index: -1;
+    animation: infinite infinity-slide 180s linear;
+    -webkit-text-stroke: 5px rgba(255, 255, 255, 0.253); /* width and color */
+}
+.btn-container button{
+    background-color: transparent;
+    color: white;
+    border: 3px black solid;
+    padding: 13px 26px;
+    border-radius: 50px;
+    font-family: Roboto Slab;
+    font-weight: 700;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.25s;
+}
+.btn-container button:hover{
+    background-color: white;
+    color: black;
+}
+.btn-container{
+    display: block;
+}
+.btn-container button.selected{
+    background-color: white;
+    color: black;
+}
+
+@keyframes infinity-slide {
+    90% {
+        transform: translateX(-100%); /* Start poza ekranem z prawej strony */
+      }
+    100% {
+        transform: translateX(100%); /* Przesunięcie do końca poza ekranem z lewej strony */
+      }
 }
 @media (max-width: 1435px) {
     .animated-text{
