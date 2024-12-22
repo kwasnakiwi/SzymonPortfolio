@@ -1,6 +1,6 @@
 import './../styles/HomePage.css';
 import git from './../assets/images/Git (2).png';
-import linkedin from './../assets/images/in.png';
+import linkedin from './../assets/images/linkedin2.png';
 import hociak from './../assets/images/Zdjęcie.png';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../components/language-selector';
