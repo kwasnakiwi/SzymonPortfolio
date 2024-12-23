@@ -1,0 +1,28 @@
+.left{
+    padding-top: 50px;
+}
+.left a{
+    font-family: Jost;
+    font-size: 137.65px;
+    font-weight: 400;
+    color: white;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    gap: 50px;
+    margin-left: 50px;
+    max-width: 550px;
+}
+a{
+    text-decoration: none;
+}
+.left-img{
+    margin-left: 140px;
+    margin-top: 200px;
+}
+.left{
+    max-width: 50%;
+    border-top-right-radius: 81.94px;
+    border-bottom-right-radius: 81.94px;
+    background-color: rgb(10, 10, 10, 1);
+}
