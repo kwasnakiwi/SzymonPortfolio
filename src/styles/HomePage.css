@@ -151,6 +151,7 @@
     color: rgba(255, 255, 255, 0.75);
     padding-top: 20px;
     margin: 0;
+    transition: 0.3s;
 }
 .lang-box{
     max-width: 310px;
@@ -165,6 +166,16 @@
     margin-top: 100px;
     padding-bottom: 22px;
     height: 126px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+.lang-box:hover img{
+    filter: grayscale(0);
+    transform: translateY(-50px);
+}
+.lang-box:hover .lang-name{
+    font-size: 40px;
+    color: white;
 }
 .languages-boxes{
     display: grid;
