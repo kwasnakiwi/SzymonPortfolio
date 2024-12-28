@@ -44,16 +44,17 @@
 .web-top-text{
     width: 690px;
     margin-top: 140px;
-    z-index: 1;
+    z-index: 0;
 }
 .web-top{
     display: flex;
     justify-content: center;
     gap: 50px;
+    z-index: 0;
 }
 .web-top > img{
     width: 590px;
-    z-index: 1;
+    z-index: 0;
 }
 .buttons{
     display: flex;
@@ -109,10 +110,16 @@
     font-size: 60px;
     font-weight: 600;
     max-width: 843px;
+    margin: 20px auto;
+    padding: 7em 0;
 }
 .przejscie{
-    padding: 22em 15%;
+    padding: 0 15%;
     background-color: black;
+    animation: pageUp linear forwards, pageOpacity linear forwards;
+    animation-timeline: view();
+    z-index: 1;
+    height: 150vh;
 }
 .umiejetnosci-title{
     font-family: Roboto Slab;
@@ -125,6 +132,7 @@
 .umiejetnosci-box{
     background-color: white;
     padding: 100px 0;
+    z-index: -1;
 }
 .umiejetnosci-desc{
     font-family: Jost;
@@ -165,6 +173,66 @@
     margin: 100px 5% 50px 5%;
     gap: 20px;
 }
+.programmer-text-h2{
+    font-family: Roboto Slab;
+    font-size: 91.3px;
+    font-weight: 600;   
+    -webkit-text-stroke: 5px  rgba(255, 255, 255, 0.253); /* width and color */
+    text-align: center;
+}
+.programmer-text-img{
+    display: block;
+    margin: auto;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 100px 10%;
+}
+#pr1{
+    grid-row: 1;
+    grid-column: 1;
+}
+#pr2{
+    grid-column: 2;
+    grid-row: 1;
+    padding-top: 100px;
+}
+#pr3{
+    grid-row: 2;
+    grid-column: 1;
+}
+#pr4{
+    grid-column: 2;
+    grid-row: 2;
+    padding-top: 100px;
+}
+.bottom-projects-btn{
+    font-family: Jost;
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    -webkit-text-stroke: 5px  rgba(255, 255, 255, 0.75); /* width and color */
+    color: transparent;
+    display: flex;
+    justify-self: center;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        scale: .8;
+    }
+    
+    40%{
+        opacity: 1;
+        scale: 1;
+    }
+  }
+    .fadeIn{
+        animation: fadeIn;
+        animation-timeline: view();
+    }
 @keyframes infinity-slide {
     90% {
         transform: translateX(-100%); /* Start poza ekranem z prawej strony */
@@ -173,9 +241,39 @@
         transform: translateX(100%); /* Przesunięcie do końca poza ekranem z lewej strony */
       }
 }
+@keyframes pageUp {
+
+   40%{
+    transform: translateY(-50%);
+
+   }
+
+}
+@keyframes pageOpacity {
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@media (max-width: 1820px){
+    .projects{
+        margin: 100px 5%;
+    }
+    #pr1, #pr2, #pr3, #pr4{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 @media (max-width: 1620px) {
     .languages-boxes{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    .projects img{
+        width: 600px;
     }
     #l1{
         grid-column: 1;
@@ -207,6 +305,29 @@
 @media (max-width: 1435px) {
     .animated-text{
         font-size: 100px;
+    }
+}
+@media (max-width: 1355px) {
+    .projects{
+        grid-template-columns: 1fr;
+    }
+    #pr1, #pr2, #pr3, #pr4{
+        grid-column: 1;
+    }
+    #pr1{
+        grid-row: 1;
+    }
+    #pr2{
+        grid-row: 2;
+    }
+    #pr3{
+        grid-row: 3;
+    }
+    #pr4{
+        grid-row: 4;
+    }
+    .projects-box > img{
+        width: 300px;
     }
 }
 @media (max-width: 1260px) {

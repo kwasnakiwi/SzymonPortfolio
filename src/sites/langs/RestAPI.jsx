@@ -6,14 +6,14 @@ import fullstar from './../../assets/images/fullstar.png';
 import emptystar from './../../assets/images/emptystar.png';
 import './../../styles/langs.css';
 
-function Python() {
+function RestApi() {
   return(
     <>
       <div className="center-container">
         <div className="content">
           <div className="left">
-            <Link to='/#languages' className="hideThisButton"><img src={arrow} /> Python</Link>
-            <Link to='/#languages' className="showThisButton"><img src={arrow} /></Link>
+            <Link to='/' className="hideThisButton"><img src={arrow} /> RestAPI</Link>
+            <Link to='/' className="showThisButton"><img src={arrow} /></Link>
             <img className="left-img" src={python} />
           </div>
           <div className="right">
@@ -58,4 +58,4 @@ function Python() {
   )
 }
 
-export default Python
+export default RestApi
