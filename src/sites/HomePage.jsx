@@ -36,11 +36,13 @@ const HomePage = () => {
         <LanguageSelector />
         <div className="web-top">
           <div className="web-top-text">
-            <span className='namer'>{t("name")}</span>
-            <h1 className="web-top-title">{t("title")}</h1>
-            <p className="web-top-desc">
-              {t("desc")}
-            </p>
+            <div className='animated-web-top'>
+              <span className='namer'>{t("name")}</span>
+              <h1 className="web-top-title">{t("title")}</h1>
+              <p className="web-top-desc">
+                {t("desc")}
+              </p>
+            </div>
             <div className='buttons'>
               <button className='cv'>{t("cvbutton")}</button>
               <div className='icons'>
@@ -70,32 +72,32 @@ const HomePage = () => {
             </p>
           </div>
           <div className='languages-boxes' id="#languages">
-            <Link to='/restapi'>
+            <Link to='/restapi' id='l1'>
               <div className='lang-box' id='l1'> 
                 <h3 className='lang-name'>RestAPI</h3>
                 <img src={restapi} />
               </div>
             </Link>
-            <Link to='/django'>
-              <div className='lang-box' id='l2'>
+            <Link to='/django' id='l2'>
+              <div className='lang-box' >
                 <h3 className='lang-name'>Django</h3>
                 <img src={django} />
               </div>
             </Link>
-            <Link to='/python'>
-              <div className='lang-box' id='l3'>
+            <Link to='/python' id='l3'>
+              <div className='lang-box' >
                 <h3 className='lang-name'>Phyton</h3>
                 <img src={phyton} />
               </div>
             </Link>
-            <Link to=''>
-              <div className='lang-box' id='l4'>
+            <Link to='' id='l4'>
+              <div className='lang-box' >
                 <h3 className='lang-name'>Postgres</h3>
                 <img src={postgres} />
               </div>
             </Link>
-            <Link to=''>
-              <div className='lang-box' id='l5'>
+            <Link to='' id='l5'>
+              <div className='lang-box' >
                 <h3 className='lang-name'>Angular</h3>
                 <img src={angular} />
               </div>

@@ -47,8 +47,19 @@
     /* right edge */
     0.35px 0 0 0 #fff;;
     border-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  
+  .vectors{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .vectors img{
+    cursor: pointer;
+  }
   .green {
     color: green;
   }
