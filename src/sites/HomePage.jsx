@@ -9,7 +9,8 @@ import django from './../assets/images/DJ.png';
 import angular from './../assets/images/An.png';
 import postgres from './../assets/images/Post.png';
 import restapi from './../assets/images/Rest 2 1.png';
-import project from './../assets/images/project.png';
+import project from './../assets/images/image.png';
+import arrow from './../assets/images/arrrow.png';
 import { Link } from 'react-router-dom';
 import Program from '../components/program';
 // import {BrowserRouter as useLocation, Route, Routes, Router } from 'react-router-dom';
@@ -108,10 +109,66 @@ const HomePage = () => {
           <h2 className='programmer-text-h2'>Lorem ipsum</h2>
           <Program />
           <div className="projects">
-            <img src={project} id='pr1' className='fadeIn'/>
-            <img src={project} id='pr2' className='fadeIn'/>
-            <img src={project} id='pr3' className='fadeIn'/>
-            <img src={project} id='pr4' className='fadeIn'/>
+            <div className="prj-box" id='pr1'>
+              <img src={project}  className='fadeIn projects-img'/>
+              <div className='project-desc'>
+                <h4>Lorem Lorem</h4>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Mattis cum dui 
+                    gravida proin tempus diam laoreet duis blandit. Dictum 
+                    senectus sapien nam.Mattis cum dui gravida proin tempus 
+                    diam laoreet duis blandit. Dictum senectus sapien nam.
+                  </p>
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
+            <div className="prj-box" id='pr2'>
+              <img src={project}  className='fadeIn projects-img'/>
+              <div className='project-desc'>
+                <h4>Lorem Lorem</h4>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Mattis cum dui 
+                    gravida proin tempus diam laoreet duis blandit. Dictum 
+                    senectus sapien nam.Mattis cum dui gravida proin tempus 
+                    diam laoreet duis blandit. Dictum senectus sapien nam.
+                  </p>
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
+            <div className="prj-box" id='pr3'>
+              <img src={project}  className='fadeIn projects-img'/>
+              <div className='project-desc'>
+                <h4>Lorem Lorem</h4>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Mattis cum dui 
+                    gravida proin tempus diam laoreet duis blandit. Dictum 
+                    senectus sapien nam.Mattis cum dui gravida proin tempus 
+                    diam laoreet duis blandit. Dictum senectus sapien nam.
+                  </p>
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
+            <div className="prj-box" id='pr4' >
+              <img src={project} className='fadeIn projects-img'/>
+              <div className='project-desc'>
+                <h4>Lorem Lorem</h4>
+                <div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Mattis cum dui 
+                    gravida proin tempus diam laoreet duis blandit. Dictum 
+                    senectus sapien nam.Mattis cum dui gravida proin tempus 
+                    diam laoreet duis blandit. Dictum senectus sapien nam.
+                  </p>
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
           </div>
           <Link to='' className='bottom-projects-btn fadeIn'>Zobacz wszystkie projekty</Link>
         </div>
