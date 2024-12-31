@@ -55,9 +55,9 @@ const HomePage = () => {
           </div>
           <img src={hociak} />
         </div>
-        {/* <div className='animated-text-box'>
-          <h3 className='animated-text'>&lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt; BACKEND DEVELOPER &lt;/&gt;</h3>
-        </div> */}
+        <div className='animated-text-box'>
+          <h3 className='animated-text'><span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span> BACKEND DEVELOPER <span>&lt;/&gt;</span></h3>
+        </div>
         <div className='przejscie'>
           <h1 className='przejscie-title'>
             Lorem ipsum dolor sit amet consectetur. Nulla sodales.

@@ -1,7 +1,8 @@
 .container { 
     display: inline-block; 
     background-color: black;
-    width: 1270px;
+    width: 0;
+    transform-origin: left;
     padding: 20px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -35,7 +36,7 @@
   
   .over-container {
     background-color: rgba(47, 47, 47, 1);
-    width: 1270px;
+    width: 0;
     padding: 5px 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -100,7 +101,7 @@
       width: 0;
     }
     to {
-      width: 203.72px;
+      width: 152px;
     }
   }
   
@@ -109,7 +110,7 @@
       width: 0;
     }
     to {
-      width: 128.67px;
+      width: 96px;
     }
   }
   
@@ -118,22 +119,31 @@
       width: 0;
     }
     to {
-      width: 546.81px;
+      width: 408px;
     }
   }
-  
+  @keyframes programm-width{
+    to{
+      width: 1270px;
+    }
+  }
   /* Animations only when visible */
   .animated .text {
-    animation: typing 2s steps(27) forwards;
+    animation: typing 2.5s steps(19) forwards;
+    animation-delay: 1s;
   }
   
   .animated .text2 {
-    animation: typing2 1.6s steps(20) forwards;
-    animation-delay: 2s;
+    animation: typing2 1.4s steps(12) forwards;
+    animation-delay: 3.5s;
   }
   
   .animated .text3 {
-    animation: typing3 7s steps(70) forwards;
-    animation-delay: 3.6s;
+    animation: typing3 7.2s steps(51) forwards;
+    animation-delay: 4.9s;
+  }
+  .animated2{
+    animation: programm-width 1s forwards;
+    
   }
   
