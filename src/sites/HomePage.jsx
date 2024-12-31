@@ -13,6 +13,7 @@ import project from './../assets/images/image.png';
 import arrow from './../assets/images/arrrow.png';
 import { Link } from 'react-router-dom';
 import Program from '../components/program';
+import { useEffect, useRef } from 'react';
 // import {BrowserRouter as useLocation, Route, Routes, Router } from 'react-router-dom';
 // import React, { useEffect } from "react";
 
@@ -30,6 +31,49 @@ const HomePage = () => {
   //   }
   // }, [location]);
 
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated3');
+          } else {
+            entry.target.classList.remove('animated3');
+          }
+        });
+      },
+      { threshold: 0.1 } // Wywołanie, gdy 70% elementu jest widoczne
+    );
+
+    const elements = document.querySelectorAll('.umiejetnosci-box');
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      elements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated4');
+          } else {
+            entry.target.classList.remove('animated4');
+          }
+        });
+      },
+      { threshold: 0.1} // Wywołanie, gdy 70% elementu jest widoczne
+    );
+
+    const elements = document.querySelectorAll('.projects-box');
+    elements.forEach((element) => observer.observe(element));
+
+    return () => {
+      elements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
 
   return(
     <>
