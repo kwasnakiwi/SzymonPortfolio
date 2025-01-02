@@ -32,48 +32,7 @@ const HomePage = () => {
   // }, [location]);
 
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animated3');
-          } else {
-            entry.target.classList.remove('animated3');
-          }
-        });
-      },
-      { threshold: 0.1 } // Wywołanie, gdy 70% elementu jest widoczne
-    );
 
-    const elements = document.querySelectorAll('.umiejetnosci-box');
-    elements.forEach((element) => observer.observe(element));
-
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animated4');
-          } else {
-            entry.target.classList.remove('animated4');
-          }
-        });
-      },
-      { threshold: 0.1} // Wywołanie, gdy 70% elementu jest widoczne
-    );
-
-    const elements = document.querySelectorAll('.projects-box');
-    elements.forEach((element) => observer.observe(element));
-
-    return () => {
-      elements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
 
   return(
     <>
@@ -169,7 +128,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="prj-box" id='pr2'>
-              <img src={project}  className='fadeIn projects-img'/>
+              <img src={project}  className='fadeIn2 projects-img'/>
               <div className='project-desc'>
                 <h4>Lorem Lorem</h4>
                 <div>
@@ -184,7 +143,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="prj-box" id='pr3'>
-              <img src={project}  className='fadeIn projects-img'/>
+              <img src={project}  className='fadeIn3 projects-img'/>
               <div className='project-desc'>
                 <h4>Lorem Lorem</h4>
                 <div>
@@ -199,7 +158,7 @@ const HomePage = () => {
               </div>
             </div>
             <div className="prj-box" id='pr4' >
-              <img src={project} className='fadeIn projects-img'/>
+              <img src={project} className='fadeIn4 projects-img'/>
               <div className='project-desc'>
                 <h4>Lorem Lorem</h4>
                 <div>
@@ -214,7 +173,7 @@ const HomePage = () => {
               </div>
             </div>
           </div>
-          <Link to='' className='bottom-projects-btn fadeIn'>Zobacz wszystkie projekty</Link>
+          <Link to='' className='bottom-projects-btn fadeIn5'>Zobacz wszystkie projekty</Link>
         </div>
       </div>
     </>

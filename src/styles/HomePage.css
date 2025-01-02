@@ -4,6 +4,9 @@
     font-weight: 500;
     color: rgba(255, 255, 255, 0.25);
 }
+body{
+
+}
 .web-top-title{
     font-family: Roboto Slab;
     font-size: 48px;
@@ -128,12 +131,17 @@
     margin: 20px auto;
     padding: 7em 0;
     z-index: 2;
+    animation: smallText linear forwards;
+    animation-timeline: view();
+    transform-origin: left;
+    animation-range-start: 600px;
+    animation-range-end: 800px;
 }
 .przejscie{
     padding: 0 15%;
     background-color: black;
     z-index: 100;
-    animation: page-up forwards linear, page-opacity forwards linear;
+    animation: page-up forwards linear;
     animation-timeline: view();
     height: 130vh;
 }
@@ -148,35 +156,25 @@
 
 }
 @keyframes page-up2{
+    20%{
+        transform: translateY(-80%);
+        padding-top: 100px;
+    }
     100%{
-        transform: translateY(-70%);
+        transform: translateY(-80%);
         padding-top: 100px;
     }
 }
 @keyframes page-up3 {
+    20%{
+        transform: translateY(-50%);
+    }
+    
     100%{
-        transform: translateY(-30%);
-        padding-top: 100px;
+        transform: translateY(-50%);
     }
 }
-@keyframes page-opacity{
 
-}
-@keyframes page-transition {
-    1%{
-        
-        transform: translateY(-90%);
-    }
-    22%{
-        opacity: 1;
-    }
-    50%{
-        opacity: 0;
-    }
-    90%{
-        transform: translateY(10%);
-    }
-}
 .umiejetnosci-title{
     font-family: Roboto Slab;
     font-size: 48px;
@@ -187,18 +185,23 @@
 }
 .umiejetnosci-box{
     background-color: white;
-    padding: 100px 0;
+    padding: 100px 0 100px;
     z-index: -1;
-    margin-top: -770px;
-    transform: translateY(0);
-    transition: 1s all ease-out;
+    margin-top: -600px;
+    animation: page-up2 forwards linear;
+    animation-timeline: view();
+    animation-range-start: -250px;
+    animation-range-end: 2500px;
+    height: 100vh;
 }
-.animated3{
-    animation: page-up2 forwards ease-out 1s;
+/* /* .animated3{
+    animation: page-up forwards ease-out;
+    animation-timeline: view();
 }
 .animated4{
-    animation: page-up3 forwards ease-out 1s;
-}
+    animation: page-up forwards ease-out;
+    animation-timeline: view(); 
+} */
 .umiejetnosci-desc{
     font-family: Jost;
     font-size: 28px;
@@ -208,6 +211,10 @@
 }
 .umiejetnosci-text{
     margin: 0 15%;
+    animation: smallText2 linear forwards;
+    animation-timeline: view();
+    animation-range-end: 800px;
+    animation-range-start: 150px;
 }
 .lang-name{
     font-family: Jost;
@@ -249,6 +256,10 @@
     margin-top: -850px;
     z-index: -1;
     background-color: rgba(21, 21, 21, 1);
+    animation: page-up3 forwards linear;
+    animation-timeline: view();
+    animation-range-start: 80px;
+    padding-top: 100px;
 }
 .languages-boxes{
     display: grid;
@@ -383,8 +394,10 @@
     color: transparent;
     display: flex;
     justify-self: center;
-    margin-bottom: 150px;
     transition: all 0.3s;
+}
+.center-container{
+    height: 3200px;
 }
 .bottom-projects-btn:hover{
     color: white;
@@ -416,8 +429,33 @@
     .fadeIn{
         animation: fadeIn;
         animation-timeline: view();
-        animation-range-start: -700px;
+        animation-range-start: -400px;
+        animation-range-end: 1000px;
         
+    }
+    .fadeIn2{
+        animation: fadeIn;
+        animation-timeline: view();
+        animation-range-start: -600px;
+        animation-range-end: 1000px;
+    }
+    .fadeIn3{
+        animation: fadeIn;
+        animation-timeline: view();
+        animation-range-start: -800px;
+        animation-range-end: 1000px;
+    }
+    .fadeIn4{
+        animation: fadeIn;
+        animation-timeline: view();
+        animation-range-start: -1000px;
+        animation-range-end: 1000px;
+    }
+    .fadeIn5{
+        animation: fadeIn;
+        animation-timeline: view();
+        animation-range-start: -1100px;
+        animation-range-end: -200px;
     }
 @keyframes infinity-slide {
     90% {
@@ -429,6 +467,11 @@
 }
 @keyframes smallText {
     to{
+        scale: 0.6;
+    }
+}
+@keyframes smallText2{
+    20%{
         scale: 0.6;
     }
 }
